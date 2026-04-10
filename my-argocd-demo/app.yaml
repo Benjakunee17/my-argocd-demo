@@ -5,16 +5,13 @@ metadata:
   namespace: argocd
 spec:
   project: default
-
   source:
     repoURL: https://github.com/Benjakunee17/my-argocd-demo.git
-    targetRevision: HEAD
-    path: manifests
-
+    targetRevision: main
+    path: my-argocd-demo/manifests
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
-
   syncPolicy:
     automated:
       prune: true
